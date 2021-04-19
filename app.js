@@ -30,7 +30,7 @@ function randomTime(min, max) {
 
 function upDown() {
     const time = randomTime(500, 1000);
-    const hole = randomHole(holes);
+    const hole = randomHole(moles);
     hole.classList.add('up');
     setTimeout(() => {
         hole.classList.remove('up');
@@ -40,7 +40,8 @@ function upDown() {
     }, time);
 }
 
-moles.forEach(mole => mole.addEventListener('onclick', hit))
+
+moles.forEach(mole => mole.addEventListener('click', hit));
 
 function hit(e) {
     score++;
